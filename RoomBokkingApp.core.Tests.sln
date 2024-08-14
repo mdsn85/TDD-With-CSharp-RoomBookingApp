@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 25.0.1706.13
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoomBokkingApp.core.Tests", "RoomBokkingApp.core.Tests\RoomBokkingApp.core.Tests.csproj", "{EB673DE8-8F89-4B52-8A7E-63D2D46CE482}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoomBookingApp.Core", "RoomBookingApp.Core\RoomBookingApp.Core.csproj", "{0052204B-76E0-4F1E-91F9-1DF019BD290C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoomBokkingApp.Core.Tests", "RoomBokkingApp.core.Tests\RoomBokkingApp.core.Tests.csproj", "{AB119E41-3240-48FD-B8F1-54863AB03C26}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +13,33 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{EB673DE8-8F89-4B52-8A7E-63D2D46CE482}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EB673DE8-8F89-4B52-8A7E-63D2D46CE482}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EB673DE8-8F89-4B52-8A7E-63D2D46CE482}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EB673DE8-8F89-4B52-8A7E-63D2D46CE482}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0052204B-76E0-4F1E-91F9-1DF019BD290C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0052204B-76E0-4F1E-91F9-1DF019BD290C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0052204B-76E0-4F1E-91F9-1DF019BD290C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0052204B-76E0-4F1E-91F9-1DF019BD290C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB119E41-3240-48FD-B8F1-54863AB03C26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB119E41-3240-48FD-B8F1-54863AB03C26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB119E41-3240-48FD-B8F1-54863AB03C26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB119E41-3240-48FD-B8F1-54863AB03C26}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E9FEAB29-1ECA-487E-A1D2-53947260DB8D}
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		Policies = $0
+		$0.DotNetNamingPolicy = $1
+		$1.DirectoryNamespaceAssociation = PrefixedHierarchical
+		$0.TextStylePolicy = $2
+		$2.inheritsSet = null
+		$2.scope = text/x-csharp
+		$0.CSharpFormattingPolicy = $3
+		$3.scope = text/x-csharp
+		$0.TextStylePolicy = $4
+		$4.FileWidth = 80
+		$4.TabsToSpaces = True
+		$4.scope = text/plain
 	EndGlobalSection
 EndGlobal
