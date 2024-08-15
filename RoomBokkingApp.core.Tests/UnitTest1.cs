@@ -1,4 +1,4 @@
-﻿namespace RoomBokkingApp.Core.Tests;
+﻿namespace RoomBookingApp.Core.Tests;
 
 public class UnitTest1
 {

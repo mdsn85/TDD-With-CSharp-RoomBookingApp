@@ -1,16 +1,38 @@
-﻿using RoomBokkingApp.Core.Models;
+﻿using RoomBookingApp.Core.Models;
+using RoomBookingApp.Core.Services;
 
-namespace RoomBokkingApp.Core.Processors
+namespace RoomBookingApp.Core.Processors
 {
     public class RoomBookingRequestProcessor
     {
-        public RoomBookingRequestProcessor()
+        private readonly IRoomBookingService _roomBookingService;
+
+        public RoomBookingRequestProcessor(IRoomBookingService roomBookingService)
         {
+            _roomBookingService = roomBookingService;
         }
 
         public RoomBookingResult BookRoom(RoomBookingRequest bookingRequest)
         {
-            return new RoomBookingResult
+            if (bookingRequest == null)
+            {
+                throw new ArgumentNullException(nameof(bookingRequest));
+            }
+
+            var availableRooms = _roomBookingService.GetAvailableRooms(bookingRequest.Date);
+            if (availableRooms.Any())
+            {
+                _roomBookingService.Save(CreateRoomBookingObject<RoomBooking>(bookingRequest));
+            }
+
+
+            return CreateRoomBookingObject<RoomBookingResult>(bookingRequest);
+        }
+
+        private static T CreateRoomBookingObject<T>(RoomBookingRequest bookingRequest)
+            where T : RoomBookingBase, new()
+        {
+            return new T
             {
                 FullName = bookingRequest.FullName,
                 Email = bookingRequest.Email,

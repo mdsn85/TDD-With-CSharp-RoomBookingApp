@@ -5,7 +5,7 @@ VisualStudioVersion = 25.0.1706.13
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoomBookingApp.Core", "RoomBookingApp.Core\RoomBookingApp.Core.csproj", "{0052204B-76E0-4F1E-91F9-1DF019BD290C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoomBokkingApp.Core.Tests", "RoomBokkingApp.core.Tests\RoomBokkingApp.core.Tests.csproj", "{AB119E41-3240-48FD-B8F1-54863AB03C26}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoomBookingApp.core.Tests", "RoomBokkingApp.core.Tests\RoomBookingApp.core.Tests.csproj", "{AB119E41-3240-48FD-B8F1-54863AB03C26}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

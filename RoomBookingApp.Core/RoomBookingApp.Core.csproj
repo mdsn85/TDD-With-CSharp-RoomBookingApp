@@ -9,9 +9,13 @@
   <ItemGroup>
     <None Remove="Processors\" />
     <None Remove="Models\" />
+    <None Remove="Services\" />
+    <None Remove="Domain\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Processors\" />
     <Folder Include="Models\" />
+    <Folder Include="Services\" />
+    <Folder Include="Domain\" />
   </ItemGroup>
 </Project>
