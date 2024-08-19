@@ -20,16 +20,21 @@ namespace RoomBookingApp.Core.Processors
             }
 
             var availableRooms = _roomBookingService.GetAvailableRooms(bookingRequest.Date);
+            var result = CreateRoomBookingObject<RoomBookingResult>(bookingRequest);
             if (availableRooms.Any())
             {
                 var room = availableRooms.First();
                 var roomBooking = CreateRoomBookingObject<RoomBooking>(bookingRequest);
                 roomBooking.RoomId = room.Id;
                 _roomBookingService.Save(roomBooking);
+                result.RoomBookingId = roomBooking.Id;
+                result.Flag = BookingResultFlag.success;
             }
-
-
-            return CreateRoomBookingObject<RoomBookingResult>(bookingRequest);
+            else
+            {
+                result.Flag = BookingResultFlag.failur;
+            }
+            return result;
         }
 
         private static T CreateRoomBookingObject<T>(RoomBookingRequest bookingRequest)

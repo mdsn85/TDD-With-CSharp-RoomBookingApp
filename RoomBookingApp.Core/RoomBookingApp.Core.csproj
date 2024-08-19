@@ -11,11 +11,13 @@
     <None Remove="Models\" />
     <None Remove="Services\" />
     <None Remove="Domain\" />
+    <None Remove="Enums\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Processors\" />
     <Folder Include="Models\" />
     <Folder Include="Services\" />
     <Folder Include="Domain\" />
+    <Folder Include="Enums\" />
   </ItemGroup>
 </Project>
