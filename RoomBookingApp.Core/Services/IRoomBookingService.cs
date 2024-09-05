@@ -1,5 +1,5 @@
 ﻿using System;
-using RoomBookingApp.Core.Domain;
+using RoomBookingApp.Domain;
 
 namespace RoomBookingApp.Core.Services
 {

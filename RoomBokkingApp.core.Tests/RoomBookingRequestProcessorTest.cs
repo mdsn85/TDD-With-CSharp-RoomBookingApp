@@ -4,7 +4,8 @@ using RoomBookingApp.Core.Processors;
 using RoomBookingApp.Core.Services;
 using Shouldly;
 using Moq;
-using RoomBookingApp.Core.Domain;
+using RoomBookingApp.Domain;
+using Xunit;
 
 namespace RoomBookingApp.Core
 {
