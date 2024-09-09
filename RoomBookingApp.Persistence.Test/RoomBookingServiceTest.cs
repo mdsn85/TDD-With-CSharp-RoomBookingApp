@@ -27,8 +27,8 @@ namespace RoomBookingApp.Persistence.Test
                 context.Add(new Room { Id = 2, Name = "Room 2" });
                 context.Add(new Room { Id = 3, Name = "Room 3" });
 
-                context.Add(new RoomBooking { RoomId = 1, Date = date });
-                context.Add(new RoomBooking { RoomId = 2, Date = date.AddDays(-1) });
+                context.Add(new RoomBooking { RoomId = 1, Date = date, Email = "aa@aa.com", FullName= "aa aa" });
+                context.Add(new RoomBooking { RoomId = 2, Date = date.AddDays(-1), Email = "bb@bb.com", FullName = "bb bb" });
 
 				context.SaveChanges();
 
@@ -52,7 +52,7 @@ namespace RoomBookingApp.Persistence.Test
 				.UseInMemoryDatabase("ShouldSaveTest")
 				.Options;
 
-			var roomBooking = new RoomBooking { RoomId = 1, Date = new DateTime(2021, 06, 09) };
+			var roomBooking = new RoomBooking { RoomId = 1, Date = new DateTime(2021, 06, 09), Email = "aa@aa.com", FullName = "aa aa" };
             using var context = new RoomBookingAppDbContext(dbOptions);
 			var roomBookingService = new RoomBookingService(context);
 			roomBookingService.Save(roomBooking);
